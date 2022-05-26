@@ -5,12 +5,12 @@ import casual from 'casual';
 
 // generator function
 function * run() {
-  for (let index = 0; index <= 999; index += 1) {
+  for (let index = 0; index <= 5; index += 1) {
     const data = {
       id: randomUUID(),
       name: `${casual.full_name}`,
-      email: `${casual.email}`,
-      at: Date.now()
+      age: `${Math.floor(Math.random() * 100 + 10)}`,
+      totalAccount: Math.floor(Math.random() * 5000 + 250)
     }
     yield data
   }
