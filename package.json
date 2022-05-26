@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/abelsouzacosta/streams-web-api/issues"
   },
-  "homepage": "https://github.com/abelsouzacosta/streams-web-api#readme"
+  "homepage": "https://github.com/abelsouzacosta/streams-web-api#readme",
+  "dependencies": {
+    "casual": "^1.6.2"
+  }
 }
