@@ -1,5 +1,6 @@
 import { get } from 'node:http';
 import { Writable, Transform } from 'node:stream';
+import { createWriteStream } from 'node:fs';
 
 const url = `http://localhost:8080`;
 
@@ -20,13 +21,7 @@ httpStream
       }
     })
   )
+  .map(chunk => chunk + "\n")
   .pipe(
-    Writable({
-      objectMode: true,
-      write(chunk, enc, cb) {
-        console.log(JSON.parse(chunk));
-
-        return cb();
-      }
-    })
+    createWriteStream('response.csv', { flags: 'a' })
   );

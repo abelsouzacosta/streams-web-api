@@ -5,7 +5,7 @@ import casual from 'casual';
 
 // generator function
 function * run() {
-  for (let index = 0; index <= 10; index += 1) {
+  for (let index = 0; index <= 500; index += 1) {
     const data = {
       id: randomUUID(),
       name: `${casual.full_name}`,
